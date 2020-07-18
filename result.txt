@@ -6,7 +6,18 @@
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
-var a=this||self;function b(){}b.prototype.a=function(){};var c=["module$tests$testA","default","TestA"],d=a;c[0]in d||"undefined"==typeof d.execScript||d.execScript("var "+c[0]);for(var e;c.length&&(e=c.shift());)c.length||void 0===b?d[e]&&d[e]!==Object.prototype[e]?d=d[e]:d=d[e]={}:d[e]=b;b.prototype.myTestMethod=b.prototype.a;
+var a = this || self;
+function b() {
+}
+b.prototype.a = function() {
+};
+var c = ["module$tests$testA", "default", "TestA"], d = a;
+c[0] in d || "undefined" == typeof d.execScript || d.execScript("var " + c[0]);
+for (var e; c.length && (e = c.shift());) {
+  c.length || void 0 === b ? d[e] && d[e] !== Object.prototype[e] ? d = d[e] : d = d[e] = {} : d[e] = b;
+}
+b.prototype.myTestMethod = b.prototype.a;
+
 
 ---- Compiling tests/**.js: ----
 
@@ -15,7 +26,24 @@ var a=this||self;function b(){}b.prototype.a=function(){};var c=["module$tests$t
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
-var d=this||self;function e(b,f){b=b.split(".");var a=d;b[0]in a||"undefined"==typeof a.execScript||a.execScript("var "+b[0]);for(var c;b.length&&(c=b.shift());)b.length||void 0===f?a[c]&&a[c]!==Object.prototype[c]?a=a[c]:a=a[c]={}:a[c]=f};function g(){}g.prototype.a=function(){};e("module$tests$testA.default.TestA",g);g.prototype.myTestMethod=g.prototype.a;e("module$tests$testB.default.TestB",function(){});
+var d = this || self;
+function e(b, f) {
+  b = b.split(".");
+  var a = d;
+  b[0] in a || "undefined" == typeof a.execScript || a.execScript("var " + b[0]);
+  for (var c; b.length && (c = b.shift());) {
+    b.length || void 0 === f ? a[c] && a[c] !== Object.prototype[c] ? a = a[c] : a = a[c] = {} : a[c] = f;
+  }
+}
+;function g() {
+}
+g.prototype.a = function() {
+};
+e("module$tests$testA.default.TestA", g);
+g.prototype.myTestMethod = g.prototype.a;
+e("module$tests$testB.default.TestB", function() {
+});
+
 
  ---- Compiling sanity check: ----
 
@@ -24,4 +52,21 @@ var d=this||self;function e(b,f){b=b.split(".");var a=d;b[0]in a||"undefined"==t
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
-var d=this||self;function e(b,f){b=b.split(".");var a=d;b[0]in a||"undefined"==typeof a.execScript||a.execScript("var "+b[0]);for(var c;b.length&&(c=b.shift());)b.length||void 0===f?a[c]&&a[c]!==Object.prototype[c]?a=a[c]:a=a[c]={}:a[c]=f};function g(){}g.prototype.a=function(){};e("TestA",g);g.prototype.myTestMethod=g.prototype.a;e("TestB",function(){});
+var d = this || self;
+function e(b, f) {
+  b = b.split(".");
+  var a = d;
+  b[0] in a || "undefined" == typeof a.execScript || a.execScript("var " + b[0]);
+  for (var c; b.length && (c = b.shift());) {
+    b.length || void 0 === f ? a[c] && a[c] !== Object.prototype[c] ? a = a[c] : a = a[c] = {} : a[c] = f;
+  }
+}
+;function g() {
+}
+g.prototype.a = function() {
+};
+e("TestA", g);
+g.prototype.myTestMethod = g.prototype.a;
+e("TestB", function() {
+});
+

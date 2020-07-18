@@ -3,6 +3,7 @@
 echo -e '\n---- Compiling testA alone: ----\n'
 google-closure-compiler \
   -O ADVANCED \
+  --formatting PRETTY_PRINT \
   --process_common_js_modules \
   --generate_exports \
   --js node_modules/google-closure-library/closure/goog/base.js \
@@ -11,6 +12,7 @@ google-closure-compiler \
 echo -e '\n---- Compiling tests/**.js: ----\n'
 google-closure-compiler \
   -O ADVANCED \
+  --formatting PRETTY_PRINT \
   --process_common_js_modules \
   --generate_exports \
   --js node_modules/google-closure-library/closure/goog/base.js \
@@ -19,6 +21,7 @@ google-closure-compiler \
 echo -e '\n ---- Compiling sanity check: ----\n'
 google-closure-compiler \
   -O ADVANCED \
+  --formatting PRETTY_PRINT \
   --process_common_js_modules \
   --generate_exports \
   --js node_modules/google-closure-library/closure/goog/base.js \
